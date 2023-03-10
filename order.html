@@ -1,0 +1,80 @@
+<html>
+<head>
+</head>
+<body>
+ <script>
+	  function check(form){var name=form.uname.value;
+						   var email-id=form.uemail.value;
+						   var phone=form.phone.value;
+						   var quantity=form.quantity.value;
+						   var products=form.products.value;
+						  
+				document.getElemntById("msg").innerHTML = "<table border='1' width='450px'>
+								<tr height='50px'> <td>Name:</td> <td>"+name+"</td> </tr>
+								<tr height='50px'> <td>Email-Id:</td> <td>"+email+"</td> </tr>
+								<tr height='50px'> <td>Phone:</td> <td>"+phone+"</td> </tr>
+								<tr height='50px'> <td>Quantity:</td> <td>"+quantity+"</td> </tr>
+								<tr height='50px'> <td>Products:</td> <td>"+products+"</td> </tr>
+				</table>";
+			}
+	</script>
+<form>
+				  <table width="800px" bgcolor="pink"> 
+				  </tr>
+				<tr>
+				    <td>
+					  <label for="Name"> Name </label>
+					</td>
+					<td>
+						<input type="text" name="Name" maxlength="20" size="30">
+					</td>
+				</tr>
+				<tr>
+				    <td>
+						<label for="E-mail"> Email-Id </label>
+					</td>
+					<td>
+						<input type="text" name="E-mail" maxlength="50" size="30">
+					</td>
+				</tr> 
+                <tr>
+					<td>
+						<label for="Phone"> Phone Number </label>
+					</td>
+					<td>
+						<input type="text" name="Phone" maxlength="10" size="30">
+					</td>
+                </tr>
+				<tr>
+					<td>
+						<label for="Quantity"> Quantity </label>
+					</td>
+					<td>
+						<input type="text" name="Quantity" maxlength="10" size="30">
+					</td>
+                </tr>
+                <tr>
+					<td>
+						<label for="Products"> Products </label>
+					</td>
+					<td>
+						<select name="Categories">
+							<option value ="Bks"> Bookmarks </option>
+							<option value ="Cds"> Cards </option>
+							<option value ="Scp"> Scrapbooks </option>
+							<option value ="H Ds"> Home Decoratives </option>
+							<option value ="Other"> Other </option>
+						</select> <br/>
+					</td>
+                </tr>
+				<tr>
+					<td colspan="2" style="text-align:center">
+						<input type="submit" value="SUBMIT" onclick="check(this.form)">
+					</td>
+				</tr>
+				</table>
+				</form>
+				<br/>
+				 <p id="msg"> </p>
+</body>
+</html>
